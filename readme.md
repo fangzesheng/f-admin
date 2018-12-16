@@ -15,7 +15,7 @@ f-admin基础权限后台是一套基于Laravel框架开发的系统，不需要
 
 > f-admin的运行环境要求PHP5.4以上；laravel框架要求为5.4。
 
-线上DEMO [f-admin](http://www.kancloud.cn/manual/thinkphp5)  
+线上DEMO [f-admin](http://f-admin.fang99.cc)  
 
 ## 导航
 
@@ -76,7 +76,7 @@ f-admin基础权限后台是一套基于Laravel框架开发的系统，不需要
 新建一个文件夹，进入该文件夹，利用git等工具输入以下命令：
 
     git init  
-    git clone https://github.com/jachohx/urpm.git
+    git clone https://github.com/fangzesheng/f-admin.git
 #### 2.安装依赖
     composer install  
 #### 3.生成APP_KEY
