@@ -36,8 +36,8 @@ f-admin基础权限后台是一套基于Laravel框架开发的系统，不需要
   	- [6.访问首页](#6访问首页)
   * [环境配置](#环境配置仅供参考)
   	- [1.windows](#1windows)
-  	- [2.linux(apache)](#2linux(apache))
-  	- [3.linux(nginx)](#3linux(nginx))
+  	- [2.linux(apache)](#2linuxapache)
+  	- [3.linux(nginx)](#3linuxnginx)
   * [感谢](#感谢)
 ## 效果预览(pc/mobile)
 
