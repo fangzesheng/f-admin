@@ -1,0 +1,103 @@
+@import 'css3.less';
+@import "var.less";
+//浮动
+.f-l{float:left}
+.f-r{float:right}
+//字体
+.font-face('../fonts/','iconfont');
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+//重置panel
+.panel-default {
+  border-color: #ebeaea;
+}
+.panel-default .panel-header {
+  border-color: transparent;
+  background-color: #fff;
+  color: #555555;
+}
+.panel-header {
+  border-bottom: solid 1px transparent;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: normal;
+}   
+//下拉框选中颜色
+.layui-form-select dl dd.layui-this{
+    background: rgb(242,242,242);
+    color: #333;
+} 
+//按钮移上去颜色
+.layui-btn-primary:hover {
+    border-color: @btnNormalHover;
+    color: #333;
+}
+//tab more的位置
+.layui-tab-bar {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e2e2e2;
+    border-radius: 2px;
+    background-color: #fff;
+}
+//引用区域的文字颜色
+.layui-elem-quote{
+    border-left: 5px solid @blue;
+}
+/*清楚浮动*/
+.clearfix{
+    .clearfix();
+}
+//灰色背景
+
+.layui-nav-no-bg{
+    background: transparent;
+    width: auto;
+    &.layui-nav-tree .layui-nav-item a:hover {
+        background-color: transparent;
+        color: @blue;
+    }
+    &.layui-nav .layui-nav-item a{
+        color: #333;
+    }
+    .layui-nav-itemed>a, .layui-nav-tree .layui-nav-title a, .layui-nav-tree .layui-nav-title a:hover{
+        background: transparent!important;
+        color: #333!important;
+    }
+    &.layui-nav-tree .layui-nav-child a {
+        height: 40px;
+        line-height: 40px;
+        text-indent: 10px;
+        color: #666;
+    }
+    &.layui-nav-tree .layui-nav-child dd.layui-this, &.layui-nav-tree .layui-this,  &.layui-nav-tree .layui-this>a:hover{
+        background-color: #fff;
+        color: @blue;
+    }
+    &.layui-nav-tree .layui-this>a{
+        background-color: #fff;
+        color: @blue;
+        border-left: 3px solid @blue;
+        margin-right: -20px;
+    }
+    .layui-nav-bar{
+        display: none;
+    }
+    
+}
+
+.showSubBtn{
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 5px;
+}
