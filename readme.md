@@ -1,6 +1,6 @@
 f-admin基础权限后台
 ===============
-❤️ 本项目 [GitHub](https://github.com/wi1dcard/alipay-sdk-php) / [Gitee(码云)](https://gitee.com/wi1dcard/alipay-sdk-php)，目前已在公司产品应用，运行在数个客户服务器内。
+❤️ 本项目 [GitHub](https://github.com/fangzesheng/f-admin) / [Gitee(码云)](https://gitee.com/fzsfzs/f-admin)，目前已在公司产品应用，运行在数个客户服务器内。
 
 f-admin基础权限后台是一套基于Laravel框架开发的系统，不需要开发者重复不必要的工作，就可以实现后台功能的快速开发，其主要特点包括：
 - [x] 集成 Composer，安装使用方便。
@@ -94,7 +94,7 @@ f-admin基础权限后台是一套基于Laravel框架开发的系统，不需要
     php artisan migrate
     composer dump-autoload
     php artisan db:seed
-> 如果在执行php artisan migrate增加表操作出现字段长度过长，则可能是因为mysql版本低于5.5.3，解决方法：  
+> 如果在执行php artisan migrate增加表操作出现字段长度过长错误，则可能是因为mysql版本低于5.5.3，解决方法：  
 - a.升级mysql  
 - b.手动配置迁移命令migrate生成的默认字符串长度，在app\Providers\AppServiceProvider中调用一下方法来实现配置  
 >记得先将新建数据库里面的表清空！！！
@@ -111,47 +111,47 @@ f-admin基础权限后台是一套基于Laravel框架开发的系统，不需要
 
 ## 环境配置（仅供参考）
 #### 1.windows
-<VirtualHost *:80>
-    DocumentRoot E:\test\public
-    ServerName www.test.com
-    <Directory "E:\test\public">
-       AllowOverride All
-       order deny,allow
-       Require all granted
-    </Directory>
-</VirtualHost>
+    <VirtualHost *:80>
+        DocumentRoot E:\test\public
+        ServerName www.test.com
+        <Directory "E:\test\public">
+           AllowOverride All
+           order deny,allow
+           Require all granted
+        </Directory>
+    </VirtualHost>
 #### 2.linux(apache)
-<VirtualHost *:80>
-    DocumentRoot /data/wwwroot/default/f-admin/public
-    ServerName www.fang99.cc
-    <Directory "/data/wwwroot/default/f-admin/public">
-       AllowOverride All
-       order deny,allow
-       Require all granted
-    </Directory>
-</VirtualHost>
+    <VirtualHost *:80>
+        DocumentRoot /data/wwwroot/default/f-admin/public
+        ServerName www.fang99.cc
+        <Directory "/data/wwwroot/default/f-admin/public">
+           AllowOverride All
+           order deny,allow
+           Require all granted
+        </Directory>
+    </VirtualHost>
 #### 3.linux(nginx)
-server {
-    listen       8088;
-    server_name  demo.fang99.cc;
-    location / {
-        index index.php index.html;
-        root /var/www/f-admin/public/;
-        try_files $uri $uri/ /index.php?$query_string;
+    server {
+        listen       8088;
+        server_name  demo.fang99.cc;
+        location / {
+            index index.php index.html;
+            root /var/www/f-admin/public/;
+            try_files $uri $uri/ /index.php?$query_string;
+        }
+        location ~ \.php$ {
+            root   /var/www/f-admin/public/;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_index index.php;
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            fastcgi_intercept_errors on;
+            include /etc/nginx/fastcgi.conf;
+        }
+        location ~* \.(css|js|jpg|woff|woff2|png)$ {
+            root /var/www/urpm/resources/assets/;
+            break;
+        }
     }
-    location ~ \.php$ {
-        root   /var/www/f-admin/public/;
-        fastcgi_pass 127.0.0.1:9000;
-        fastcgi_index index.php;
-        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-        fastcgi_intercept_errors on;
-        include /etc/nginx/fastcgi.conf;
-    }
-    location ~* \.(css|js|jpg|woff|woff2|png)$ {
-        root /var/www/urpm/resources/assets/;
-        break;
-    }
-}
 ## 感谢
 
 - [layer](http://layer.layui.com/)
