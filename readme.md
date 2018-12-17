@@ -95,7 +95,7 @@ f-admin基础权限后台是一套基于Laravel框架开发的系统，不需要
     php artisan migrate
     composer dump-autoload
     php artisan db:seed
-> 如果在执行php artisan migrate增加表操作出现字段长度过长错误，则可能是因为mysql版本低于5.5.3，解决方法：  
+> 如果在执行php artisan migrate增加表操作出现字段长度过长错误时，则可能是因为mysql版本低于5.5.3，解决方法：  
 - a.升级mysql  
 - b.手动配置迁移命令migrate生成的默认字符串长度，在app\Providers\AppServiceProvider中调用一下方法来实现配置  
 >记得先将新建数据库里面的表清空！！！
