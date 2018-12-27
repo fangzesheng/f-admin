@@ -148,10 +148,6 @@ f-admin基础权限后台是一套基于Laravel框架开发的系统，不需要
             fastcgi_intercept_errors on;
             include /etc/nginx/fastcgi.conf;
         }
-        location ~* \.(css|js|jpg|woff|woff2|png)$ {
-            root /var/www/urpm/resources/assets/;
-            break;
-        }
     }
 ## 感谢
 
