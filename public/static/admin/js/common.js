@@ -166,19 +166,22 @@ function refresh() {
 }
 
 /**
- * 刷新iframe
+ * 刷新排序
  */
 function changeSort(name,obj) {
-    $.ajax({
-        url:$(obj).attr('data-url'),
-        data:{name: name,val:$(obj).val(),id:$(obj).attr('data-id'),_token:$("input[name='_token']").val()},
-        type:'post',
-        dataType:'json',
-        success:function(res){
-            layer.msg(res.msg);
-        },
-        error : function(XMLHttpRequest, textStatus, errorThrown) {
-            layer.msg('网络失败', {time: 1000});
-        }
+    layui.use(['jquery'], function() {
+        var $ = layui.jquery;
+        $.ajax({
+            url:$(obj).attr('data-url'),
+            data:{name: name,val:$(obj).val(),id:$(obj).attr('data-id'),_token:$("input[name='_token']").val()},
+            type:'post',
+            dataType:'json',
+            success:function(res){
+                layer.msg(res.msg);
+            },
+            error : function(XMLHttpRequest, textStatus, errorThrown) {
+                layer.msg('网络失败', {time: 1000});
+            }
+        });
     });
 }

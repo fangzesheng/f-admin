@@ -46,7 +46,7 @@
                     <tr id='node-{{$branch['id']}}' class="child-node-{{$branch['id']}} parent collapsed" style="display:none ;" parentid="{{$branch['id']}}">
                         <td><input type="checkbox" name="" lay-skin="primary" data-id="{{$child_branch['id']}}"></td>
                         <td class="hidden-xs">{{$child_branch['id']}}</td>
-                        <td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="{{$child_branch['order']}}" data-id="{{$branch['id']}}" data-url="{{url('/sort')}}" onchange="changeSort('menus',this)"></td>
+                        <td class="hidden-xs"><input type="text" name="title" autocomplete="off" class="layui-input" value="{{$child_branch['order']}}" data-id="{{$child_branch['id']}}" data-url="{{url('/sort')}}" onchange="changeSort('menus',this)"></td>
                         <td class="hidden-xs">后台</td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─{{$child_branch['title']}}</td>
                         <td>
