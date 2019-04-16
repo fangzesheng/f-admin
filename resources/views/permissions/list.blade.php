@@ -1,7 +1,9 @@
 @section('title', '权限列表')
 @section('header')
-    <button class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs" data-desc="添加权限" data-url="{{url('/permissions/0/edit')}}"><i class="layui-icon">&#xe654;</i></button>
-    <button class="layui-btn layui-btn-small layui-btn-warm freshBtn hidden-xs"><i class="layui-icon">&#x1002;</i></button>
+    <div class="layui-inline">
+    <button class="layui-btn layui-btn-small layui-btn-normal addBtn" data-desc="添加权限" data-url="{{url('/permissions/0/edit')}}"><i class="layui-icon">&#xe654;</i></button>
+    <button class="layui-btn layui-btn-small layui-btn-warm freshBtn"><i class="layui-icon">&#x1002;</i></button>
+    </div>
 @endsection
 @section('table')
     <table class="layui-table" lay-even lay-skin="nob">
