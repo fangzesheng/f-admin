@@ -13,7 +13,7 @@ f-admin基础权限后台是一套基于Laravel框架开发的系统，不需要
 - [x] pc端和手机端都能适配。
 - [ ] 其它优化，持续进行中 ......
 
-> f-admin的运行环境要求PHP5.4以上；laravel框架要求为5.4。
+> f-admin的运行环境要求PHP5.4以上；laravel框架要求为5.4(5.5有童鞋测试是可以的，更高版本应该也是可行)。
 
 线上DEMO [f-admin](http://f-admin.fang99.cc)   
 你也可以用手机扫下二维码查看手机效果 ![](./img/code.png)
