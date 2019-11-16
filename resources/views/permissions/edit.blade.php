@@ -51,7 +51,7 @@
                 permission_remark: [/[a-zA-Z]{2,12}$/, '权限标识必须2到12位字母'],
                 permission_name: [/[\u4e00-\u9fa5]{2,12}$/, '权限名称必须2到12位汉字'],
                 permission_desc: [/[\u4e00-\u9fa5]{2,30}$/, '权限介绍必须2到30位汉字'],
-                permission_control: [/[a-zA-Z][@][get|post]{3,30}$/, '权限控制格式错误'],
+                permission_control: [/[a-zA-Z][@][a-zA-Z]{3,50}$/, '权限控制格式错误'],
             });
             form.on('submit(formDemo)', function(data) {
                 var chk_value =[];
